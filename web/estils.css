@@ -15,50 +15,54 @@ table, th, td {
     border-collapse: collapse;
     border: 1px solid black;
 }
-
-.botoMenu {
-    color: blue;
-    cursor: pointer;
-    margin: 0 16px;
-}
-
-.botoMenu:hover {
-    text-decoration: underline;
-}
-
 body {
-    font-family: "Open Sans";
+    font-family: 'Indie Flower', cursive;
+    background-color:gainsboro;
 }
-
+body > div {
+    display: none;
+}
 body > #frontendHome {
     display: flex;
+    margin-top: 50;
+    margin-left: 25;
+    font-size: 50;
+}
+#frontendMenuWeb {
+    background-color: white;
+    padding: 5px 0;
+    font-family: 'Indie Flower', cursive;
+    margin-top: -50px;
+    opacity: 0.89;
 }
 
-body > #frontendPresentacio {
-    display: none;
-}
+#frontendMenuMobil {
+background-color: white;
+opacity: 0.5;
+margin: 0.3;
+padding: 1px;
+border:1px solid black;
 
-body > #frontendProductes {
-    display: none;
-}
 
-body > #frontendProductes > #productesContinguts {
+}
+.botoMenu {
+font-size:25px ;
+color: black;
+padding: 10px 10px;
+display: inline-block;
+margin-top:5px;
+margin-left: 5px;
+margin-right: 100px;
+           }
+.botoMenu:hover {
+   text-decoration-line: underline;
+    cursor: pointer;
+
+}
+#productesContinguts {
     width: 100%;
 }
-
-body > #frontendContacte {
-    display: none;
-}
-
-body > #backofficeUsuaris {
-    display: none;
-}
-
-body > #backofficeProductes {
-    display: none;
-}
-
-body > #popups {
+#popups {
     background-color: rgba(0, 0, 0, 0.5);
     position: absolute;
     display: none;
@@ -69,11 +73,192 @@ body > #popups {
     height: 100%;
     width: 100%;
 }
-
 #popups > div {
     border: solid 1px black;
     background-color: lightcyan;
     display: none;
+        }
+#fototitulo {
+ display: flex;
+ background-image: url(/web/imatges/cab-tailandia.jpg);
+ background-size: cover;
+ background-repeat:no-repeat;
+ background-position:center center;
+ min-height: 400px;
+ flex-direction: column;
+ justify-content:center ;
+ padding-left: 0px;
+}
+#Icono1 {
+display:flex;
+position: relative;
+width: 60px;
+height: 60px;
+background-image: url(/web/imatges/icono1.png);
+}
+#frontendContacte {
+    display: none;
+    flex-direction: column;
+    font-size: 30px;
+    margin-top: 25px;
+    margin-left: 10px;
 }
 
+.social-bar {
+    position: fixed;
+    right: 0;
+    top: 70%;
+    font-size: 2.1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    z-index: 100;
+}
 
+.icon {
+    color: black;
+    text-decoration: none;
+    padding:0.8rem;
+    display: flex;
+    transition: all .4s;
+    border: black;
+}
+
+.icon-facebook2 {
+    background: rgb(131, 131, 250);
+    border-radius: 1rem 0 0 0;
+}
+
+.icon-instagram {
+    background: rgb(243, 122, 243);
+}
+
+.icon-phone {
+    background: rgb(156, 245, 134);
+}
+
+.icon-mail {
+    background: rgb(233, 107, 107);
+    border-radius: 0 0 0 1rem;
+}
+
+.icon-twitter {
+    background: rgb(126, 236, 236);
+}
+
+.icon:hover {
+    padding-right: 3rem;
+    border-radius: 1rem 0 0 1rem;
+    box-shadow: 0 0 2.5rem rgba(0, 0, 0,);
+}
+
+.enlaceSocial {
+    text-decoration: none !important;
+}
+.contenedor {
+    margin-top: 10px;
+    width: 90%;
+    max-width: 900px;
+    margin: auto;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.tabla {
+    width: 50%;
+    height: 650px;
+    margin: 2px;
+    border: 1px solid black;
+    border-radius: 4px;
+    box-shadow: 0px 0px 4px 0px black;
+    padding: 5px;
+    text-align:center;
+    flex-grow: 1;
+    color: black;
+    background-color: azure;
+
+}
+
+.tabla img{
+    width: 114px;
+    margin-top: 60px ;
+    border-style: outset;
+    border-color: gold;
+    background-color: khaki;
+
+}
+
+.tabla>h1{
+font-size: 50px;
+margin-top: 15px;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+text-decoration: underline;
+}
+
+.tabla>h4{
+    font-size: 25px;
+    margin-top: 80px;
+    }
+
+.tabla:hover{
+    background-color: #343759;
+    color: #f1f1f2;
+    transition: 0.2 all;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+#frontendPresentacio{
+    align-items: center;
+    display: none;
+    margin: auto;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-repeat: no-repeat;
+    background-image: url(/web/imatges/fondo.jpg);
+    background-size: cover;
+}
+.taula {
+    width: 800px;
+    height: 500px;
+    font-size: 30;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#frontendproductes{
+    display: none;
+    align-items: center;
+    text-align: center;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+.producte>img{
+    vertical-align: middle;
+    height: 500;
+    width: 700;
+    margin-top: 10;
+}
+
+.producte>h3{
+    font-family: inherit;
+    font-weight: 400;
+    margin-top: 20;
+    text-decoration: underline;
+}
+
+.producte{
+    font-size: 25;
+    margin-bottom: 10px;
+    margin-top: 25px;
+}
+
+.producte:hover{
+    background-color: #000000c5;
+    color: #ffffff;
+    transition: cubic-bezier(0.6, -0.28, 0.735, 0.045);
+    transform: skew(1.1);
+    cursor: pointer;
+    padding: 10px;
+    border: thin;
+}
