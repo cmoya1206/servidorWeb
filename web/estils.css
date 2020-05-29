@@ -4,10 +4,18 @@
 @media only screen and (max-device-width: 599px) { .desktop { display: none !important; } }
 @media only screen and (min-device-width: 600px) { .mobile  { display: none !important; } }
 .flex       { display: flex; }
-.flexRow    { flex-direction: row; }
+.flexRow    { flex-direction: row; 
+display: inherit;
+}
 .flexColumn { flex-direction: column; }
 .none       { display: none; }
-.halfWidth  { max-width: 50%; }
+.halfWidth  { 
+    max-width: 800;
+    height: 50;
+    margin: 30;
+    font-size: 30;
+    font-family: inherit;
+ }
 .botoIcona  { cursor: pointer; }
 
 /* Definicions específiques */
@@ -22,12 +30,8 @@ body {
 body > div {
     display: none;
 }
-body > #frontendHome {
-    display: flex;
-    margin-top: 50;
-    margin-left: 25;
-    font-size: 50;
-}
+
+
 #frontendMenuWeb {
     background-color: white;
     padding: 5px 0;
@@ -75,8 +79,16 @@ margin-right: 100px;
 }
 #popups > div {
     border: solid 1px black;
-    background-color: lightcyan;
+    background-color: white;
     display: none;
+    border-radius: 5px;
+    align-items: left;
+    justify-content: center;
+    padding: 10px;
+    width: 800px;
+    height: 400px;
+    font-size: 30px;
+    box-shadow: 0px 6px 20px -5px rgba(0,0,0,0.75);
         }
 #fototitulo {
  display: flex;
@@ -181,12 +193,59 @@ background-image: url(/web/imatges/icono1.png);
 }
 
 .tabla img{
-    width: 114px;
+    width: 130px;
     margin-top: 60px ;
     border-style: outset;
-    border-color: gold;
+    border-color: black;
     background-color: khaki;
+    border-radius: 10px;
 
+}
+.oferta {
+    width: 500px;
+    margin-top: 60px ;
+    border-style: outset;
+    border-color: black;
+    background-color: khaki; 
+    font-style: inherit;
+}
+.oferta {
+    width: 60%;
+    height: 700px;
+    margin: 2px;
+    border: 1px solid black;
+    border-radius: 14px;
+    box-shadow: 0px 0px 4px 0px black;
+    padding: 5px;
+    text-align:center;
+    flex-grow: 1;
+    color: black;
+    background-color: azure;
+
+}
+.oferta>h1{
+    font-size: 50px;
+    margin-top: 15px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-decoration: underline;
+    }
+    
+    .oferta>h4{
+        font-size: 25px;
+        margin-top: 80px;
+        }
+    
+    .oferta:hover{
+        background-color:gold;
+        color: black;
+        transition: 0.2 all;
+        transform: scale(1.1);
+        cursor: pointer;
+    }
+
+#cuentaatras {
+border-radius: 15px;
+margin-top: 50px;
 }
 
 .tabla>h1{
@@ -202,8 +261,8 @@ text-decoration: underline;
     }
 
 .tabla:hover{
-    background-color: #343759;
-    color: #f1f1f2;
+    background-color:gold;
+    color: black;
     transition: 0.2 all;
     transform: scale(1.1);
     cursor: pointer;
@@ -230,19 +289,26 @@ text-decoration: underline;
     display: none;
     align-items: center;
     text-align: center;
-    justify-content: flex-end;
+    margin: 15px;
     flex-direction: column;
+    font-size: 30px;
+    background-color: gainsboro(218, 165, 32, 0.418);
+    flex-wrap: nowrap;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .producte>img{
     vertical-align: middle;
     height: 500;
     width: 700;
     margin-top: 10;
+    border-image: repeat;
+    border-radius: 350px;
 }
 
 .producte>h3{
     font-family: inherit;
-    font-weight: 400;
+    font-weight: 450;
     margin-top: 20;
     text-decoration: underline;
 }
@@ -251,9 +317,48 @@ text-decoration: underline;
     font-size: 25;
     margin-bottom: 10px;
     margin-top: 25px;
+    margin: 5px;
+    flex-direction: row;
+    padding: 50px;
 }
 
 .producte:hover{
+    background-color: #000000d8;
+    color: #ffffff;
+    transition: cubic-bezier(0.6, -0.28, 0.735, 0.045);
+    transform: matrix3d(1.1);
+    cursor: pointer;
+    padding: 15px;
+    border: ridge;
+    border-radius: 10px;
+}
+
+.targeta1 {
+    background-color: white;
+    display: flex;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+    padding: auto;
+    margin: 20px;
+    flex-direction: column;
+    width: 300px;
+    height: 300px;
+    font-size: 25px;
+}
+
+.afegirusuari {
+    align-items: center;
+    justify-content: center;
+    margin: 50px;
+    margin-left: 700px;
+    width: 150;
+    height: 65;
+    font-size: 23;
+    font-family: inherit;
+}
+
+.botoIcona:hover{
     background-color: #000000c5;
     color: #ffffff;
     transition: cubic-bezier(0.6, -0.28, 0.735, 0.045);
@@ -262,3 +367,25 @@ text-decoration: underline;
     padding: 10px;
     border: thin;
 }
+
+#frontendHome{
+    display: flex;
+    margin: auto;
+    flex-direction: inherit;
+    background-repeat: no-repeat;
+    background-size: auto;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+}
+
+#backofficeUsuarisLoading{
+    font-size: 30px;
+    margin: 20px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+
+

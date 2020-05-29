@@ -14,6 +14,7 @@
         <script src='/web/script-popups.js'></script>
         <script src='/web/script-seccio-backofficeusuaris.js'></script>
         <script src='/web/script-seccio-frontendproductes.js'></script>
+        <script src='/web/script-seccio-frontendproducte.js'></script>
         <script src='/web/script-utils.js'></script>
         <script src='/web/script.js'></script>
         <link rel="stylesheet" href="/web/font.css"/>
@@ -42,9 +43,19 @@
             <div id='botoGestioProductesMobil' class='botoMenu none' onclick='navegacio.canviaSeccio("backofficeProductes")'>Gestió productes</div>
             <div id='botoLogoutMobil' class='botoMenu none' onclick='login.tancaLaSessio()'>Sortir</div>
         </div>
-        <div id='frontendHome'>
-            ¡Benvingut a la web de Viatges Moya!
-        </div>
+<div id='frontendHome'>
+    <div class="contenedor">
+        <div class="Oferta">
+            <h1>Oferta del mes</h1>
+            <img src="/web/imatges/Sahara-recorrido-camello-4.png" alt="">
+            <h4>Gaudeix del Sáhara + Hotel **** + Guia turístic</h4>
+            <h5>3000€</h5>
+        </div> 
+</div>
+<div class="cuentaatras">
+<iframe width="300" height="154" src="https://w2.countingdownto.com/3033947" frameborder="0"></iframe>
+</div>
+</div>
         <div id='frontendPresentacio'>
             <div class="contenedor">
                 <div class="tabla">
@@ -103,6 +114,10 @@
             <div id='productesLoading'>Carregant productes<img src="/web/imatges/loading.gif" width="35"></div>
             <div id='productesContinguts' class='flexColumn'></div>
         </div>
+        <div id='frontendProducte'>
+            <div id='producteLoading'>Carregant producte<img src="/web/imatges/loading.gif" width="35"></div>
+            <div id='producteContinguts' class='flexColumn'></div>
+        </div>
         <div id='frontendContacte'><div><img src="/web/imatges/maps.gif" width="75">Illescas, 45200, Toledo</div>
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3050.8663746968537!2d-3.8474150842088504!3d40.122981279400314!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd41f11ff97128d9%3A0xb39bb35c446d90f0!2sViajes%20Moya%20Travel%20SL!5e0!3m2!1ses!2ses!4v1583830771855!5m2!1ses!2ses" width="50" height="500" frameborder="0" style="border:10;"  aria-hidden="false" tabindex="0"></iframe>
             <div class="social-bar">
@@ -115,7 +130,7 @@
             </div>
         </div>
         <div id='backofficeUsuaris'>
-                <div id='backofficeUsuarisLoading'>Carregant usuaris ...</div>
+                <div id='backofficeUsuarisLoading'>Carregant usuaris<img src="/web/imatges/loading.gif" width="35"></div>
                 <div id='backofficeUsuarisContinguts' class='flexColumn'></div>
         </div>
         <div id='backofficeProductes'>
@@ -128,9 +143,9 @@
                 <div>Codi:</div>
                 <input id='loginCodi' type='password' class='halfWidth' />
                 <br/>
-                <input type='button' value='entra' class='halfWidth' onclick='login.autenticaAmbFormulari()' />
-                <div id='loginLoading' class='none'>Carregant ...</div>
-                <div id='loginError' class='none'>Error al fer login ...</div>
+                <input type='button' value='Accedeix' class='halfWidth' onclick='login.autenticaAmbFormulari()' />
+                <div id='loginLoading' class='none'><img src="/web/imatges/loading.gif" width="25"></div>
+                <div id='loginError' class='none'>Información inválida</div>
             </div>
             <div id='popupBackofficeUsuaris' class='flexColumn'>
                 <div>Id:</div>

@@ -29,34 +29,27 @@ class ObjSeccioBackofficeUsuaris {
         if (objRebut.resultat === 'ok') {
             navegacio.dadesSeccio = objRebut.missatge
 
-            codiHTML = codiHTML + '<table>'
-            codiHTML = codiHTML + '<tr>'
-            codiHTML = codiHTML + '<td></td>'
-            codiHTML = codiHTML + '<td>Id</td>'
-            codiHTML = codiHTML + '<td>Correu</td>'
-            codiHTML = codiHTML + '<td>Nom</td>'
-            codiHTML = codiHTML + '<td>Tipus</td>'
-            codiHTML = codiHTML + '<td></td>'
-            codiHTML = codiHTML + '</tr>'
+            codiHTML = codiHTML + '<div class="flexRow">'
+            
             for (cntUsuari = 0; cntUsuari < navegacio.dadesSeccio.length; cntUsuari = cntUsuari + 1) {
                 valor = navegacio.dadesSeccio[cntUsuari]
-                codiHTML = codiHTML + '<tr>'
-                codiHTML = codiHTML + '<td><img src="' + valor.imatge + '" width="50" /></td>'
-                codiHTML = codiHTML + '<td>' + valor.id + '</td>'
-                codiHTML = codiHTML + '<td>' + valor.correu + '</td>'
-                codiHTML = codiHTML + '<td>' + valor.nom + '</td>'
-                codiHTML = codiHTML + '<td>' + valor.tipus + '</td>'
+                codiHTML = codiHTML + '<div class="targeta1">'
+                codiHTML = codiHTML + '<div><img src="' + valor.imatge + '" width="80" /></div>'
+                codiHTML = codiHTML + '<div>' + valor.id + '</div>'
+                codiHTML = codiHTML + '<div>' + valor.correu + '</div>'
+                codiHTML = codiHTML + '<div>' + valor.nom + '</div>'
+                codiHTML = codiHTML + '<div>' + valor.tipus + '</div>'
                 // No deixem editar l'usuari 'admin@admin.com'
                 if (valor.correu !== 'admin@admin.com') {
-                    codiHTML = codiHTML + '<td><i class="material-icons botoIcona" onclick="seccioBackofficeUsuaris.mostraEdicioUsuari(' + valor.id + ')">edit</i></td>'
+                    codiHTML = codiHTML + '<div><i class="material-icons botoIcona" onclick="seccioBackofficeUsuaris.mostraEdicioUsuari(' + valor.id + ')">edit</i></div>'
                 } else {
-                    codiHTML = codiHTML + '<td></td>'
+                    codiHTML = codiHTML + '<div></div>'
                 }
-                codiHTML = codiHTML + '</tr>'
+                codiHTML = codiHTML + '</div>'
             }
-            codiHTML = codiHTML + '</table>'
+            codiHTML = codiHTML + '</div>'
             codiHTML = codiHTML + '</br></br>'
-            codiHTML = codiHTML + '<input type="button" value="Afegir usuari" onclick="seccioBackofficeUsuaris.mostraAfegeixUsuari()" />'
+            codiHTML = codiHTML + '<div class="afegirusuari"><input type="button" value="Afegir usuari" onclick="seccioBackofficeUsuaris.mostraAfegeixUsuari()" /></div>'
         }
 
         // Amaguem la càrrega i mostrem el llistat de productes en una taula
